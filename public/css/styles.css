@@ -1,0 +1,333 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+} */
+.personality-selector {
+    margin: 20px 0;
+}
+#bot {
+    margin: 30px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.formal {
+    background-color: #f0f0f0;
+    color: #333;
+}
+.friendly {
+    background-color: #d4edda;
+    color: #155724;
+}
+.humorous {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+body {
+    padding: 5%; /* Adiciona um preenchimento de 5% em todas as direções */
+    background-color: #F5F5F5; /* Define a cor de fundo para um tom de cinza claro */
+    text-align: center;
+
+}
+  
+  /* Configurações do contêiner principal */
+.container {
+    padding: 0; /* Remove qualquer preenchimento interno do contêiner */
+    background-color: #FFF; /* Define a cor de fundo para branco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Adiciona uma sombra ao contêiner */
+    height: 700px; /* Define a altura do contêiner para 700 pixels */
+}
+/* Estilos do menu lateral */
+.menu {
+    float: left; /* Alinha o menu à esquerda */
+    height: 700px; /* Define a altura do menu para 700 pixels */
+    width: 30px; /* Define a largura do menu para 70 pixels */
+    background: #4768b5; /* Define um fundo gradiente azul escuro */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19); /* Adiciona uma sombra ao menu */
+}
+.menu .items {
+    list-style: none; /* Remove a estilização padrão da lista */
+    margin: auto; /* Centraliza a lista dentro do menu */
+    padding: 0; /* Remove qualquer preenchimento interno da lista */
+}
+.menu .items .item {
+    height: 90px; /* Define a altura dos itens do menu para 70 pixels */
+    border-bottom: 1px solid #6780cc; /* Adiciona uma borda inferior nos itens */
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    color: #9fb5ef; /* Define a cor do texto dos itens do menu */
+    font-size: 17pt; /* Define o tamanho da fonte dos itens do menu */
+}
+.menu .items .item-active {
+    background-color: #5172c3; /* Define a cor de fundo para itens ativos */
+    color: #FFF; /* Define a cor do texto para itens ativos */
+}
+.menu .items .item:hover {
+    cursor: pointer; /* Altera o cursor ao pairar sobre os itens do menu */
+    background-color: #4f6ebd; /* Define a cor de fundo ao pairar sobre os itens do menu */
+    color: #cfe5ff; /* Define a cor do texto ao pairar sobre os itens do menu */
+}
+/* Configurações da seção de conversas */
+.discussions {
+    width: 25%; /* Define a largura da seção de conversas para 35% */
+    height: 700px; /* Define a altura da seção de conversas para 700 pixels */
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.20); /* Adiciona uma sombra à seção de conversas */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites da seção de conversas */
+    /* background-color: #87a3ec; */
+    background-color: #f0eff3; /* Define a cor de fundo para um tom de azul claro */
+    display: inline-block; /* Faz com que a seção de conversas se comporte como um bloco em linha */
+}
+.discussions .discussion {
+    width: 100%; /* Define a largura das discussões para 100% */
+    height: 90px; /* Define a altura das discussões para 90 pixels */
+    background-color: #FAFAFA; /* Define a cor de fundo para um tom de cinza claro */
+    border-bottom: solid 1px #E0E0E0; /* Adiciona uma borda inferior sólida nas discussões */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Centraliza o conteúdo verticalmente nas discussões */
+    cursor: pointer; /* Altera o cursor ao pairar sobre as discussões */
+}
+.discussions .search {
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Centraliza o conteúdo verticalmente na barra de pesquisa */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente na barra de pesquisa */
+    color: #E0E0E0; /* Define a cor do texto para um tom de cinza claro */
+}
+.discussions .search .searchbar {
+    height: 40px; /* Define a altura da barra de pesquisa para 40 pixels */
+    background-color: #FFF; /* Define a cor de fundo para branco */
+    width: 70%; /* Define a largura da barra de pesquisa para 70% */
+    padding: 0 20px; /* Adiciona preenchimento interno à barra de pesquisa */
+    border-radius: 50px; /* Adiciona uma borda circular à barra de pesquisa */
+    border: 1px solid #EEEEEE; /* Adiciona uma borda à barra de pesquisa */
+    display: flex; /* Usa o modelo de layout flexível */
+    align-items: center; /* Centraliza o conteúdo verticalmente na barra de pesquisa */
+    cursor: pointer; /* Altera o cursor ao pairar sobre a barra de pesquisa */
+}
+.discussions .search .searchbar input {
+    margin-left: 15px; /* Adiciona margem à esquerda para o campo de entrada */
+    height: 38px; /* Define a altura do campo de entrada para 38 pixels */
+    width: 100%; /* Define a largura do campo de entrada para 100% */
+    border: none; /* Remove a borda do campo de entrada */
+    font-family: 'Montserrat', sans-serif; /* Define a família da fonte para Montserrat ou fonte sans-serif */
+}
+/* Configurações para placeholders do campo de entrada */
+.discussions .search .searchbar *::-webkit-input-placeholder {
+    color: #E0E0E0; /* Define a cor do placeholder para um tom de cinza claro no Chrome/Safari */
+}
+.discussions .search .searchbar input *:-moz-placeholder {
+    color: #E0E0E0; /* Define a cor do placeholder para um tom de cinza claro no Firefox */
+}
+.discussions .search .searchbar input *::-moz-placeholder {
+    color: #E0E0E0; /* Define a cor do placeholder para um tom de cinza claro no Firefox */
+}
+.discussions .search .searchbar input *:-ms-input-placeholder {
+    color: #E0E0E0; /* Define a cor do placeholder para um tom de cinza claro no IE/Edge */
+}
+.discussions .message-active {
+    width: 98.5%; /* Define a largura da mensagem ativa para 98.5% */
+    height: 90px; /* Define a altura da mensagem ativa para 90 pixels */
+    background-color: #FFF; /* Define a cor de fundo para branco */
+    border-bottom: solid 1px #E0E0E0; /* Adiciona uma borda inferior sólida na mensagem ativa */
+}
+.discussions .discussion .photo {
+    margin-left: 20px; /* Adiciona margem à esquerda para a foto do usuário nas discussões */
+    display: block; /* Faz com que a foto do usuário se comporte como um bloco */
+    width: 45px; /* Define a largura da foto do usuário para 45 pixels */
+    height: 45px; /* Define a altura da foto do usuário para 45 pixels */
+    background: #E6E7ED; /* Define um fundo cinza claro para a foto do usuário */
+    border-radius: 50px; /* Adiciona uma borda circular à foto do usuário */
+    background-position: center; /* Centraliza a posição do fundo na foto do usuário */
+    background-size: cover; /* Faz com que o fundo cubra completamente a foto do usuário */
+    background-repeat: no-repeat; /* Impede a repetição do fundo na foto do usuário */
+}
+.online {
+    position: relative; /* Define a posição em relação ao local normal */
+    top: 30px; /* Define a posição superior em relação ao elemento pai */
+    left: 35px; /* Define a posição à esquerda em relação ao elemento pai */
+    width: 13px; /* Define a largura do indicador online para 13 pixels */
+    height: 13px; /* Define a altura do indicador online para 13 pixels */
+    background-color: #8BC34A; /* Define a cor de fundo para verde */
+    border-radius: 13px; /* Adiciona uma borda circular ao indicador online */
+    border: 3px solid #FAFAFA; /* Adiciona uma borda ao indicador online */
+}
+.desc-contact {
+    height: 43px; /* Define a altura da descrição do contato para 43 pixels */
+    width: 50%; /* Define a largura da descrição do contato para 50% */
+    white-space: nowrap; /* Impede que o texto da descrição do contato quebre para a próxima linha */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites da descrição do contato */
+    text-overflow: ellipsis; /* Adiciona reticências (...) ao texto que ultrapassa os limites da descrição do contato */
+}
+.discussions .discussion .name {
+    margin: 0 0 0 20px; /* Adiciona margem à esquerda para o nome do usuário nas discussões */
+    font-family: 'Montserrat', sans-serif; /* Define a família da fonte para Montserrat ou fonte sans-serif */
+    font-size: 11pt; /* Define o tamanho da fonte para 11 pontos */
+    color: #515151; /* Define a cor do texto para um tom de cinza médio */
+}
+.discussions .discussion .message {
+    margin: 6px 0 0 20px; /* Adiciona margem à esquerda para a mensagem do usuário nas discussões */
+    font-family: 'Montserrat', sans-serif; /* Define a família da fonte para Montserrat ou fonte sans-serif */
+    font-size: 9pt; /* Define o tamanho da fonte para 9 pontos */
+    color: #515151; /* Define a cor do texto para um tom de cinza médio */
+}
+.timer {
+    margin-left: 15%; /* Adiciona margem à esquerda para o temporizador */
+    font-family: 'Open Sans', sans-serif; /* Define a família da fonte para Open Sans ou fonte sans-serif */
+    font-size: 11px; /* Define o tamanho da fonte para 11 pontos */
+    padding: 3px 8px; /* Adiciona preenchimento interno ao temporizador */
+    color: #BBB; /* Define a cor do texto para um tom de cinza claro */
+    /* background-color: */
+}  
+.chat {
+  width: calc(102% - 25px);
+}
+.welcome {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+  
+.header-chat {
+    background-color: #FFF;
+    height: 60px;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+  
+.chat .header-chat .icon {
+  margin-left: 30px;
+  color:#515151;
+  font-size: 14pt;
+}
+.chat .header-chat .name {
+  margin: 0 0 0 100px;
+  text-transform: uppercase;
+  font-family:'Montserrat', sans-serif;
+  font-size: 13pt;
+  color:#515151;
+}
+.chat .header-chat .right {
+  /* position: absolute; */
+  right: 40px;
+}
+.chat .messages-chat {
+    padding: 20px 35px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -90%);
+    width: 600px;
+    height: 200px;
+  
+}
+.chat .messages-chat .message {
+    display:flex;
+    align-items: center;
+    margin-bottom: 8px;
+    /* margin-left: 500px; */
+}
+.chat .messages-chat .message .photo {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background: #E6E7ED;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.chat .messages-chat .text {
+    margin: 0 5px;
+    background-color: #f6f6f6;
+    padding: 15px;
+    border-radius: 12px;
+}
+.text-only {
+    margin-left: 45px;
+}
+.time {
+    font-size: 10px;
+    color:lightgrey;
+    margin-bottom:10px;
+    margin-left: 85px;
+}
+.response-time {
+    float: right;
+    margin-right: 40px !important;
+}
+.response {
+    float: right;
+    margin-right: 0px !important;
+    margin-left:auto; /* flexbox alignment rule */
+}
+.response .text {
+    background-color: #e3effd !important;
+}
+.footer-chat {
+    width: calc(75% - 96px);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border-top: 2px solid #EEE;
+    right: 20px;
+}
+  
+.chat .footer-chat .icon {
+    margin-left: 10px;
+    color: #C0C0C0;
+    font-size: 14pt;
+}
+.chat .footer-chat .send {
+    color: #fff;
+    background-color: #4f6ebd;
+    padding: 12px;
+    border-radius: 50px;
+    font-size: 14pt;
+    margin-left: 10px; /* Ajuste a margem conforme necessário */
+}
+.chat .footer-chat .name {
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13pt;
+    color: #515151;
+}
+.chat .footer-chat .right {
+    margin-right: 10px; /* Ajuste a margem conforme necessário */
+}
+.write-message {
+    border: none !important;
+    width: 60%; /* Ajuste a largura conforme necessário */
+    height: 50px;
+    margin-left: 10px; /* Ajuste a margem conforme necessário */
+    /* margin-right: 10px; */
+    padding: 10px;
+}
+  
+.footer-chat *::-webkit-input-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+}
+.footer-chat input *:-moz-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+}
+.footer-chat input *::-moz-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+    margin-left:5px;
+}
+.footer-chat input *:-ms-input-placeholder {
+    color: #C0C0C0;
+    font-size: 13pt;
+}
+.clickable {
+    cursor: pointer;
+}
